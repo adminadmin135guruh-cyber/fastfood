@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEZFOOD — Zamonaviy Fast Food Online Buyurtma</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Maxsus CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ==================== NAVBAR BO'LIMI ==================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top tf-navbar">
+    <div class="container">
+      <!-- Brend logotipi va nomi -->
+      <a class="navbar-brand d-flex align-items-center gap-2 tf-brand" href="#bosh-sahifa">
+        <span class="tf-logo-box">
+          <i class="bi bi-lightning-charge-fill"></i>
+        </span>
+        <span>TEZ<span class="text-orange">FOOD</span></span>
+      </a>
+
+      <!-- Mobil menyu tugmasi -->
+      <button
+        class="navbar-toggler border-0 shadow-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Menyuni ochish"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Bosh menyu havolalari va Savatcha tugmasi -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item">
+            <a class="nav-link tf-nav-link active" href="#bosh-sahifa">Bosh sahifa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tf-nav-link" href="#mashhur">Mashhur</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tf-nav-link" href="#menyu">Menyu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tf-nav-link" href="#biz-haqimizda">Biz haqimizda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tf-nav-link" href="#yetkazish">Yetkazib berish</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2">
+          <button
+            type="button"
+            class="btn tf-cart-btn position-relative"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#cartOffcanvas"
+            aria-controls="cartOffcanvas"
+          >
+            <i class="bi bi-bag-check-fill me-1"></i>
+            <span>Savatcha</span>
+            <span class="badge tf-cart-badge" id="navbarCartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO BANNER BO'LIMI ==================== -->
+  <header id="bosh-sahifa" class="tf-hero">
+    <div class="container py-5">
+      <div class="row align-items-center g-5 py-3">
+        <div class="col-lg-6">
+          <div class="tf-hero-badge mb-3">
+            <i class="bi bi-fire me-1"></i>
+            <span>Issiq • Mazali • 30 daqiqada eshigingizda</span>
+          </div>
+          <h1 class="tf-hero-title mb-3">
+            Haqiqiy <span class="text-orange">Fast Food</span> lazzati — birgina bosishda
+          </h1>
+          <p class="tf-hero-subtitle mb-4">
+            Yangi pishirilgan shirali burgerlar, qarsildoq lavashlar, issiq pitsalar va
+            muzdek ichimliklar. Promo kod: <strong>TEZ10</strong> orqali <strong>10%</strong> chegirma oling!
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#menyu" class="btn tf-btn-primary btn-lg">
+              <i class="bi bi-grid-fill me-2"></i>Menyuni ko‘rish
+            </a>
+            <button
+              type="button"
+              class="btn tf-btn-outline-light btn-lg"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#cartOffcanvas"
+            >
+              <i class="bi bi-bag me-2"></i>Savatchani ochish
+            </button>
+          </div>
+          <div class="row g-3 tf-hero-stats">
+            <div class="col-4">
+              <div class="tf-stat-card">
+                <div class="tf-stat-num">30 daq</div>
+                <div class="tf-stat-label">O‘rtacha yetkazish</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="tf-stat-card">
+                <div class="tf-stat-num">4.9 ★</div>
+                <div class="tf-stat-label">Mijozlar bahosi</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="tf-stat-card">
+                <div class="tf-stat-num">15+</div>
+                <div class="tf-stat-label">Tanlov menyusi</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="tf-hero-visual">
+            <img
+              id="heroBannerImg"
+              src=""
+              alt="TEZFOOD maxsus burger va fast food to'plami"
+              class="img-fluid tf-hero-img"
+            />
+            <div class="tf-floating-promo">
+              <div class="small text-uppercase fw-bold text-orange">Maxsus taklif</div>
+              <div class="fw-bold">TEZ10 kodi — 10% chegirma</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MASHHUR MAHSULOTLAR BO'LIMI ==================== -->
+  <section id="mashhur" class="py-5 tf-section-light">
+    <div class="container py-2">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+        <div>
+          <span class="tf-kicker">Eng ko‘p buyurtma qilinadiganlar</span>
+          <h2 class="tf-section-title mb-0">Mashhur mahsulotlar</h2>
+        </div>
+        <a href="#menyu" class="btn tf-btn-dark">
+          Barcha menyu <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+
+      <div class="row g-4" id="popularProductsGrid">
+        <!-- JavaScript orqali mashhur mahsulotlar yuklanadi -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MAHSULOTLAR MENYUSI BO'LIMI ==================== -->
+  <section id="menyu" class="py-5 tf-section-white">
+    <div class="container py-2">
+      <div class="text-center max-w-2xl mx-auto mb-4">
+        <span class="tf-kicker">Katalog</span>
+        <h2 class="tf-section-title">Mahsulotlar menyusi</h2>
+        <p class="text-muted-custom mb-0">
+          Kategoriyani tanlang va sevimli taom yoki ichimligingizni savatchaga qo‘shing.
+        </p>
+      </div>
+
+      <!-- Kategoriya filtrlari -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" id="categoryTabs">
+        <button type="button" class="btn tf-cat-btn active" data-category="all">
+          <i class="bi bi-layers-fill me-1"></i> Barchasi
+        </button>
+        <button type="button" class="btn tf-cat-btn" data-category="Fast Food">
+          <i class="bi bi-egg-fried me-1"></i> Fast Food
+        </button>
+        <button type="button" class="btn tf-cat-btn" data-category="Ichimliklar">
+          <i class="bi bi-cup-straw me-1"></i> Ichimliklar
+        </button>
+        <button type="button" class="btn tf-cat-btn" data-category="Desertlar">
+          <i class="bi bi-cake2-fill me-1"></i> Desertlar
+        </button>
+      </div>
+
+      <!-- Mahsulotlar ro'yxati -->
+      <div class="row g-4" id="menuProductsGrid">
+        <!-- JavaScript orqali kategoriya bo'yicha mahsulotlar yuklanadi -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BIZ HAQIMIZDA BO'LIMI ==================== -->
+  <section id="biz-haqimizda" class="py-5 tf-section-dark text-white">
+    <div class="container py-3">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="tf-kicker">Biz haqimizda</span>
+          <h2 class="tf-section-title text-white mb-3">
+            Sifat va tezlik — <span class="text-orange">TEZFOOD</span> tamoyili
+          </h2>
+          <p class="text-light-muted mb-3">
+            TEZFOOD — har kuni yangi va saralangan mahsulotlardan tayyorlanadigan taomlar
+            orqali mijozlarga yuqori darajadagi xizmat ko‘rsatuvchi zamonaviy fast food brendi.
+            Bizda har bir burger, lavash va pitsa buyurtma tushgandan keyingina yangidan tayyorlanadi.
+          </p>
+          <p class="text-light-muted mb-4">
+            Gigiyena standartlari, aniq vazn, boy ta’m va qulay onlayn buyurtma tizimi bizning
+            asosiy ustuvorligimizdir.
+          </p>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="tf-feature-box">
+                <i class="bi bi-shield-check text-orange fs-4"></i>
+                <h5 class="mt-2 mb-1 fw-bold">100% Yangi masalliqlar</h5>
+                <p class="small text-light-muted mb-0">
+                  Har kuni yangi non, sabzavot, go‘sht va maxsus souslar.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="tf-feature-box">
+                <i class="bi bi-award text-orange fs-4"></i>
+                <h5 class="mt-2 mb-1 fw-bold">Restoran darajasi</h5>
+                <p class="small text-light-muted mb-0">
+                  Tajribali oshpazlar va muvozanatlashtirilgan retseptlar.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="tf-about-card p-4 p-md-5 rounded-4">
+            <h4 class="fw-bold mb-4">Nega aynan TEZFOOD?</h4>
+            <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+              <li class="d-flex gap-3">
+                <span class="tf-check-icon"><i class="bi bi-check-lg"></i></span>
+                <div>
+                  <strong>Tezkor onlayn savatcha:</strong> Mahsulot sonini bir zumda o‘zgartiring va
+                  umumiy narxni real vaqtda ko‘ring.
+                </div>
+              </li>
+              <li class="d-flex gap-3">
+                <span class="tf-check-icon"><i class="bi bi-check-lg"></i></span>
+                <div>
+                  <strong>Foydali promo kodlar:</strong> <code>TEZ10</code> kodi bilan buyurtmangizga
+                  10% chegirma oling.
+                </div>
+              </li>
+              <li class="d-flex gap-3">
+                <span class="tf-check-icon"><i class="bi bi-check-lg"></i></span>
+                <div>
+                  <strong>Qulay to‘lov turlari:</strong> Naqd pul, bank kartasi yoki kuryerga
+                  yetkazilganda karta orqali to‘lang.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== YETKAZIB BERISH BO'LIMI ==================== -->
+  <section id="yetkazish" class="py-5 tf-section-light">
+    <div class="container py-2">
+      <div class="text-center max-w-2xl mx-auto mb-5">
+        <span class="tf-kicker">Kuryerlik xizmati</span>
+        <h2 class="tf-section-title">Yetkazib berish haqida ma’lumot</h2>
+        <p class="text-muted-custom mb-0">
+          Buyurtmangiz maxsus termo-sumkalarda issiq holatda va o‘z vaqtida yetkaziladi.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="tf-info-card h-100">
+            <div class="tf-info-icon">
+              <i class="bi bi-clock-history"></i>
+            </div>
+            <h5 class="fw-bold">Ish vaqti va tezlik</h5>
+            <p class="text-muted-custom small mb-0">
+              Har kuni <strong>09:00 dan 23:30 gacha</strong> ishlaymiz. Shahar bo‘ylab o‘rtacha
+              yetkazib berish vaqti <strong>25–35 daqiqa</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="tf-info-card h-100">
+            <div class="tf-info-icon">
+              <i class="bi bi-box-seam"></i>
+            </div>
+            <h5 class="fw-bold">Yetkazish narxi</h5>
+            <p class="text-muted-custom small mb-0">
+              Yetkazib berish xizmati <strong>15 000 so‘m</strong>.
+              <strong>100 000 so‘m</strong> va undan yuqori buyurtmalarda (chegirmadan so‘ng)
+              yetkazish <strong>BEPUL</strong>!
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="tf-info-card h-100">
+            <div class="tf-info-icon">
+              <i class="bi bi-credit-card-2-front"></i>
+            </div>
+            <h5 class="fw-bold">Qulay to‘lov usullari</h5>
+            <p class="text-muted-custom small mb-0">
+              Buyurtmani rasmiylashtirishda <strong>Naqd pul</strong>, <strong>Bank kartasi</strong>
+              yoki <strong>Yetkazib berilganda karta orqali to‘lov</strong>ni tanlashingiz mumkin.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER BO'LIMI ==================== -->
+  <footer class="tf-footer text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4 pb-4 border-bottom border-secondary-subtle">
+        <div class="col-lg-4">
+          <a class="navbar-brand d-inline-flex align-items-center gap-2 tf-brand mb-3" href="#bosh-sahifa">
+            <span class="tf-logo-box">
+              <i class="bi bi-lightning-charge-fill"></i>
+            </span>
+            <span>TEZ<span class="text-orange">FOOD</span></span>
+          </a>
+          <p class="text-light-muted small mb-3">
+            Eng mazali fast food taomlari, tetiklashtiruvchi ichimliklar va shirin desertlar
+            bir joyda. Tez, ishonchli va mazali!
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#menyu" class="tf-social-btn" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+            <a href="#menyu" class="tf-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#menyu" class="tf-social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="fw-bold text-orange mb-3">Bo‘limlar</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="#bosh-sahifa" class="tf-footer-link">Bosh sahifa</a></li>
+            <li><a href="#mashhur" class="tf-footer-link">Mashhur</a></li>
+            <li><a href="#menyu" class="tf-footer-link">Menyu</a></li>
+            <li><a href="#biz-haqimizda" class="tf-footer-link">Biz haqimizda</a></li>
+            <li><a href="#yetkazish" class="tf-footer-link">Yetkazib berish</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h6 class="fw-bold text-orange mb-3">Kategoriyalar</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="#menyu" data-quick-cat="Fast Food" class="tf-footer-link">Fast Food</a></li>
+            <li><a href="#menyu" data-quick-cat="Ichimliklar" class="tf-footer-link">Ichimliklar</a></li>
+            <li><a href="#menyu" data-quick-cat="Desertlar" class="tf-footer-link">Desertlar</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h6 class="fw-bold text-orange mb-3">Bog‘lanish</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small text-light-muted">
+            <li><i class="bi bi-telephone-fill text-orange me-2"></i>+998 90 123 45 67</li>
+            <li><i class="bi bi-geo-alt-fill text-orange me-2"></i>Toshkent sh., Amir Temur ko‘chasi, 108</li>
+            <li><i class="bi bi-clock-fill text-orange me-2"></i>09:00 – 23:30 (Har kuni)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-3 d-flex flex-wrap justify-content-between align-items-center gap-2 small text-light-muted">
+        <span>© <span id="currentYear"></span> TEZFOOD. Barcha huquqlar himoyalangan.</span>
+        <span>Promo kod: <strong class="text-orange">TEZ10</strong> (10% chegirma)</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SAVATCHA OFFCANVAS ==================== -->
+  <div
+    class="offcanvas offcanvas-end tf-offcanvas"
+    tabindex="-1"
+    id="cartOffcanvas"
+    aria-labelledby="cartOffcanvasLabel"
+  >
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold" id="cartOffcanvasLabel">
+        <i class="bi bi-bag-check-fill text-orange me-2"></i>Sizning savatchangiz
+      </h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Yopish"
+      ></button>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column justify-content-between p-0">
+      <!-- Savatcha mahsulotlari -->
+      <div class="p-3 overflow-auto flex-grow-1" id="cartItemsContainer">
+        <!-- JavaScript orqali to'ldiriladi -->
+      </div>
+
+      <!-- Savatcha pastki hisob-kitob qismi -->
+      <div class="p-3 border-top bg-light tf-cart-summary" id="cartSummaryBox">
+        <!-- Promo kod kiritish -->
+        <div class="mb-3">
+          <label for="promoCodeInput" class="form-label small fw-semibold mb-1">
+            Promo kod (masalan: <code>TEZ10</code>)
+          </label>
+          <div class="input-group">
+            <input
+              type="text"
+              id="promoCodeInput"
+              class="form-control tf-input"
+              placeholder="Promo kodni kiriting..."
+            />
+            <button type="button" id="applyPromoBtn" class="btn tf-btn-dark">
+              Qo‘llash
+            </button>
+          </div>
+          <div id="promoMessage" class="small mt-1" aria-live="polite"></div>
+        </div>
+
+        <!-- Narxlar tafsiloti -->
+        <div class="d-flex justify-content-between small mb-1">
+          <span class="text-muted">Mahsulotlar summasi:</span>
+          <span class="fw-semibold" id="cartSubtotalText">0 so‘m</span>
+        </div>
+
+        <div class="d-flex justify-content-between small mb-1 text-success" id="cartDiscountRow" style="display: none !important;">
+          <span>Chegirma (<span id="appliedPromoLabel"></span>):</span>
+          <span class="fw-semibold" id="cartDiscountText">-0 so‘m</span>
+        </div>
+
+        <div class="d-flex justify-content-between small mb-2">
+          <span class="text-muted">Yetkazib berish:</span>
+          <span class="fw-semibold" id="cartDeliveryText">0 so‘m</span>
+        </div>
+
+        <hr class="my-2" />
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="fw-bold fs-6">Jami to‘lov:</span>
+          <span class="fw-extrabold fs-5 text-orange" id="cartTotalText">0 so‘m</span>
+        </div>
+
+        <button
+          type="button"
+          id="openCheckoutBtn"
+          class="btn tf-btn-primary w-100 py-2 fw-bold"
+          disabled
+        >
+          Buyurtmani rasmiylashtirish
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== BUYURTMANI RASMIYLASHTIRISH MODAL ==================== -->
+  <div
+    class="modal fade"
+    id="checkoutModal"
+    tabindex="-1"
+    aria-labelledby="checkoutModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content tf-modal">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold" id="checkoutModalLabel">
+            <i class="bi bi-receipt-cutoff text-orange me-2"></i>Buyurtmani rasmiylashtirish
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Yopish"
+          ></button>
+        </div>
+
+        <div class="modal-body p-4">
+          <div class="row g-4">
+            <!-- Chap ustun: Mijoz ma'lumotlari formasi -->
+            <div class="col-lg-7">
+              <form id="checkoutForm" novalidate>
+                <div class="mb-3">
+                  <label for="customerName" class="form-label fw-semibold">
+                    1. Ism-familiya <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control tf-input"
+                    id="customerName"
+                    placeholder="Masalan: Azizbek Karimov"
+                    required
+                  />
+                  <div class="invalid-feedback" id="nameError">
+                    Iltimos, ism-familiyangizni kiriting (kamida 3 ta belgi).
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="customerPhone" class="form-label fw-semibold">
+                    2. Telefon raqami <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    class="form-control tf-input"
+                    id="customerPhone"
+                    placeholder="+998 90 123 45 67"
+                    required
+                  />
+                  <div class="invalid-feedback" id="phoneError">
+                    Iltimos, to‘g‘ri telefon raqamini kiriting (masalan: +998901234567).
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="customerAddress" class="form-label fw-semibold">
+                    3. Yetkazib berish manzili <span class="text-danger">*</span>
+                  </label>
+                  <textarea
+                    class="form-control tf-input"
+                    id="customerAddress"
+                    rows="2"
+                    placeholder="Tuman, ko‘cha, uy yoki mo‘ljalni kiriting..."
+                    required
+                  ></textarea>
+                  <div class="invalid-feedback" id="addressError">
+                    Iltimos, yetkazib berish manzilini to‘liq kiriting.
+                  </div>
+                </div>
+
+                <div class="mb-2">
+                  <label class="form-label fw-semibold">
+                    4. To‘lov usuli <span class="text-danger">*</span>
+                  </label>
+                  <div class="d-flex flex-column gap-2">
+                    <label class="tf-payment-option">
+                      <input
+                        type="radio"
+                        name="paymentMethod"
+                        value="Naqd pul"
+                        checked
+                      />
+                      <span><i class="bi bi-cash-stack text-orange me-2"></i>Naqd pul</span>
+                    </label>
+
+                    <label class="tf-payment-option">
+                      <input
+                        type="radio"
+                        name="paymentMethod"
+                        value="Bank kartasi"
+                      />
+                      <span><i class="bi bi-credit-card text-orange me-2"></i>Bank kartasi</span>
+                    </label>
+
+                    <label class="tf-payment-option">
+                      <input
+                        type="radio"
+                        name="paymentMethod"
+                        value="Yetkazib berilganda karta orqali to‘lov"
+                      />
+                      <span>
+                        <i class="bi bi-phone-flip text-orange me-2"></i>
+                        Yetkazib berilganda karta orqali to‘lov
+                      </span>
+                    </label>
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  id="confirmOrderBtn"
+                  class="btn tf-btn-primary w-100 py-2 fw-bold mt-3"
+                >
+                  <i class="bi bi-check2-circle me-1"></i>Buyurtmani tasdiqlash
+                </button>
+              </form>
+            </div>
+
+            <!-- O'ng ustun: Buyurtma xulosasi -->
+            <div class="col-lg-5">
+              <div class="tf-order-summary-box p-3 rounded-3">
+                <h6 class="fw-bold mb-3">Buyurtma tarkibi</h6>
+                <div id="checkoutItemsList" class="d-flex flex-column gap-2 mb-3 small">
+                  <!-- JS orqali to'ldiriladi -->
+                </div>
+                <hr />
+                <div class="d-flex justify-content-between small mb-1">
+                  <span>Mahsulotlar:</span>
+                  <span id="checkoutSubtotal">0 so‘m</span>
+                </div>
+                <div class="d-flex justify-content-between small mb-1 text-success" id="checkoutDiscountRow">
+                  <span>Chegirma:</span>
+                  <span id="checkoutDiscount">-0 so‘m</span>
+                </div>
+                <div class="d-flex justify-content-between small mb-2">
+                  <span>Yetkazib berish:</span>
+                  <span id="checkoutDelivery">0 so‘m</span>
+                </div>
+                <div class="d-flex justify-content-between fw-bold fs-6 pt-2 border-top">
+                  <span>Jami:</span>
+                  <span class="text-orange" id="checkoutTotal">0 so‘m</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== BUYURTMA TASDIQLANDI MODAL ==================== -->
+  <div
+    class="modal fade"
+    id="orderSuccessModal"
+    tabindex="-1"
+    aria-labelledby="orderSuccessModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content tf-modal text-center p-3">
+        <div class="modal-body">
+          <div class="tf-success-icon mx-auto mb-3">
+            <i class="bi bi-check-lg"></i>
+          </div>
+          <h4 class="fw-extrabold mb-2" id="orderSuccessModalLabel">
+            Buyurtmangiz qabul qilindi!
+          </h4>
+          <p class="text-muted-custom small mb-3">
+            Operatorimiz tez orada bog‘lanadi va kuryerimiz buyurtmani yetkazib beradi.
+          </p>
+
+          <div class="text-start tf-receipt-box p-3 rounded-3 small mb-4" id="orderReceiptDetails">
+            <!-- Buyurtma tafsilotlari JS orqali chiqariladi -->
+          </div>
+
+          <button
+            type="button"
+            class="btn tf-btn-primary w-100 py-2 fw-bold"
+            data-bs-dismiss="modal"
+          >
+            Yana xarid qilish
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast xabarnoma (Savatchaga qo'shildi va h.k.) -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1090">
+    <div
+      id="cartToast"
+      class="toast align-items-center text-bg-dark border-0 shadow-lg"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="d-flex">
+        <div class="toast-body d-flex align-items-center gap-2">
+          <i class="bi bi-check-circle-fill text-orange fs-5"></i>
+          <span id="cartToastMessage">Mahsulot savatchaga qo‘shildi!</span>
+        </div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Yopish"
+        ></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Maxsus JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+</body>
+</html>
